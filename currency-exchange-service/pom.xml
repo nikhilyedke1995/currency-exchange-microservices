@@ -87,7 +87,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name>credence/demo-${project.artifactId}:${project.version}</name>
+						<name>niya28049596/ni28el:${project.artifactId}-${project.version}</name>
 					</image>
 					<pullPolicy>IF_NOT_PRESENT</pullPolicy>
 				</configuration>
