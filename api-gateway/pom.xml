@@ -61,18 +61,23 @@
 	</dependencyManagement>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<image>
-						<name>niya28049596/ni28el:${project.artifactId}-${project.version}</name>
-					</image>
-					<pullPolicy>IF_NOT_PRESENT</pullPolicy>
-				</configuration>
-			</plugin>
-		</plugins>
+	<plugins>
+		<plugin>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-maven-plugin</artifactId>
+		<configuration>
+			<mainClass>com.demo.microservices.apigateway.ApiGatewayApplication</mainClass>
+		</configuration>
+
+		<executions>
+			<execution>
+				<goals>
+					<goal>repackage</goal>
+				</goals>
+			</execution>
+		</executions>
+	</plugin>
+	</plugins>
 	</build>
 
 </project>
